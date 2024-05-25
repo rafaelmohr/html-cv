@@ -35,14 +35,14 @@
 
     <section class="section card experience">
         <h2>{{work.title}}</h2>
-        <div class="timeline reverse">
+        <div class="timeline">
             {{#each work.items}}
                 <div class="timeline-entry">
                     <div class="circle"></div>
                     <div class="content">
                         <p class="date">{{this.dateString}}</p>
                         <h3>{{this.title}}</h3>
-                        <p>{{this.text}}</p>
+                        <p>{{{this.text}}}</p>
                     </div>
                 </div>
             {{/each}}
@@ -62,17 +62,19 @@
 
     <section class="section card skills">
         <h2>{{skills.title}}</h2>
-        {{#each skills.sections}}
-            <div class="category">
-                <h3>{{this.title}}</h3>
-                {{#each this.items}}
-                    <div class="item">
-                        <p>{{this.text}}</p>
-                        <div class="progress-bar l-{{this.level}}"></div>
-                    </div>
-                {{/each}}
-            </div>
-        {{/each}}
+        <div class="categories-wrapper">
+            {{#each skills.sections}}
+                <div class="category">
+                    <h3>{{this.title}}</h3>
+                    {{#each this.items}}
+                        <div class="item">
+                            <p>{{this.text}}</p>
+                            <div class="progress-bar l-{{this.level}}"></div>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/each}}
+        </div>
     </section>
 
     <section class="section card other">

@@ -1,4 +1,4 @@
-# Small CV "Framework" for a HTML CV printable from the Browser
+# Simple"Framework" for an HTML CV printable from the Browser
 
 Different languages can be added as JSON Files, following the structure from ```language.json```.
 

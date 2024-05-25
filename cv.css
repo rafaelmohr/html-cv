@@ -4,10 +4,20 @@
     padding: 20px;
 }
 
+html {
+    /* styles to bring the CV into a nice format for printing
+     these just happened to fit the contents of my CV, if the content changes, these will probably have to be adapted */
+    font-size: 90%;
+    .publications{
+        margin-top: var(--grid-gap);
+    }
+}
+
 :root {
     --prim-color: #6A5ACD;
     --gray: #9d9d9d;
     --border-radius: 8px;
+    --grid-gap: 20px;
 }
 
 body {
@@ -23,7 +33,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
-    grid-gap: 20px;
+    grid-gap: var(--grid-gap);
 }
 
 h1, h2 {
@@ -60,20 +70,20 @@ h1, h2 {
     display: flex;
     align-self: center;
     width: 270px;
-    height: 270px;
+    height: 290px;
     border-radius: var(--border-radius);
     overflow: hidden;
 
     padding: 0 !important;
 
-    img {
+    & > img {
         width: 100%;
-        aspect-ratio: 1;
+        /*aspect-ratio: 1;*/
         object-fit: cover;
     }
 }
 
-.education, .experience, .publications {
+.education, .experience, .publications, .skills, .other {
     grid-column: span 5;
 }
 
@@ -191,62 +201,71 @@ h2 {
 }
 
 .skills {
-    grid-column: span 3;
     display: flex;
     flex-direction: column;
 
-    .category {
-        margin-bottom: 12px;
+    .categories-wrapper {
 
-        h3 {
-            margin-block: 5px;
-            font-size: 0.95rem;
-        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 60px;
+        row-gap: 20px;
 
-        .item {
+        .category {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            margin-bottom: 12px;
 
-            p {
-                margin-block: 3px;
+            h3 {
+                margin-block: 5px;
+                font-size: 0.95rem;
             }
 
-            .progress-bar {
-                background-color: #dedede;
-                height: 6px;
-                width: 150px;
-                border-radius: 3px;
+            .item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
 
-                position: relative;
-                overflow: hidden;
-
-                &:before {
-                    content: '';
-                    position: absolute;
-                    background-color: var(--prim-color);
-                    height: 100%;
+                p {
+                    margin-block: 3px;
                 }
 
-                &.l-1:before {
-                    width: 20%;
-                }
+                .progress-bar {
+                    background-color: #dedede;
+                    height: 6px;
+                    width: 150px;
+                    border-radius: 3px;
 
-                &.l-2:before {
-                    width: 40%;
-                }
+                    position: relative;
+                    overflow: hidden;
 
-                &.l-3:before {
-                    width: 60%;
-                }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        background-color: var(--prim-color);
+                        height: 100%;
+                    }
 
-                &.l-4:before {
-                    width: 80%;
-                }
+                    &.l-1:before {
+                        width: 20%;
+                    }
 
-                &.l-5:before {
-                    width: 100%;
+                    &.l-2:before {
+                        width: 40%;
+                    }
+
+                    &.l-3:before {
+                        width: 60%;
+                    }
+
+                    &.l-4:before {
+                        width: 80%;
+                    }
+
+                    &.l-5:before {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -254,8 +273,6 @@ h2 {
 }
 
 .other {
-    grid-column: span 5;
-
     display: flex;
     flex-direction: column;
 
@@ -267,8 +284,13 @@ h2 {
             flex: 1;
             font-weight: bold;
         }
+
         .text {
             flex: 4;
+        }
+
+        & p {
+            margin-block: 0.7em;
         }
     }
 }
