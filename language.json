@@ -1,0 +1,62 @@
+{
+  "name": "name",
+  "email": "email",
+  "birthday": "01/01/2000",
+  "phone": "phone",
+  "address": "address",
+  "github-link": "https://github.com",
+  "github-username": "username",
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "dateString": "2020-2021",
+        "title": "Primary School",
+        "text": "First line. <br /> Second Line"
+      }
+    ]
+  },
+  "work": {
+    "title": "Work Experience",
+    "items": [
+      {
+        "dateString": "since 10/02",
+        "title": "XY Inc., Very important position",
+        "text": "First line. <br /> Second Line"
+      }
+    ]
+  },
+  "publications": {
+    "title": "Scientific Publications",
+    "items": [
+      {
+        "dateString": "May 2024",
+        "title": "Paper Title",
+        "text": "Conference of Papers, London"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "sections": [
+      {
+        "title": "Section 1",
+        "items": [
+          {
+            "text": "Technology",
+            "level": 3
+          }
+        ]
+      }
+    ]
+  },
+  "other": {
+    "title": "Other",
+    "items": [
+      {
+        "name": "Hobbies",
+        "text": "Doing things"
+      }
+    ]
+  }
+}

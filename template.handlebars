@@ -1,0 +1,87 @@
+<div class="container">
+    <section class="header card">
+        <div class="info-wrapper">
+
+            <h1>{{ name }}</h1>
+            <div class="info">
+                <p><i class="fa-solid fa-at"></i>{{email}}</p>
+                <p><i class="fa-solid fa-cake-candles"></i>{{birthday}}</p>
+                <p><i class="fa-solid fa-phone"></i>{{phone}}</p>
+                <p><i class="fa-solid fa-address-card"></i>{{address}}</p>
+                <p><i class="fa-brands fa-github"></i> <a href="{{{github-link}}}">{{{github-username}}}</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-wrapper card">
+        <img src="photo.jpeg"/>
+    </section>
+
+    <section class="section card education">
+        <h2>{{ education.title }}</h2>
+        <div class="timeline">
+            {{#each education.items}}
+                <div class="timeline-entry">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <p class="date">{{ this.dateString }}</p>
+                        <h3>{{ this.title }}</h3>
+                        <p>{{{ this.text }}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section class="section card experience">
+        <h2>{{work.title}}</h2>
+        <div class="timeline reverse">
+            {{#each work.items}}
+                <div class="timeline-entry">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <p class="date">{{this.dateString}}</p>
+                        <h3>{{this.title}}</h3>
+                        <p>{{this.text}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section class="section card publications">
+        <h2>{{publications.title}}</h2>
+        {{#each publications.items}}
+            <div class="item">
+                <span class="status">{{this.dateString}}</span>
+                <span class="title">{{this.title}}</span>
+                <span class="details">{{this.text}}</span>
+            </div>
+        {{/each}}
+    </section>
+
+    <section class="section card skills">
+        <h2>{{skills.title}}</h2>
+        {{#each skills.sections}}
+            <div class="category">
+                <h3>{{this.title}}</h3>
+                {{#each this.items}}
+                    <div class="item">
+                        <p>{{this.text}}</p>
+                        <div class="progress-bar l-{{this.level}}"></div>
+                    </div>
+                {{/each}}
+            </div>
+        {{/each}}
+    </section>
+
+    <section class="section card other">
+        <h2>{{other.title}}</h2>
+        {{#each other.items}}
+            <div class="item">
+                <p class="name">{{this.name}}</p>
+                <p class="text">{{this.text}}</p>
+            </div>
+        {{/each}}
+    </section>
+</div>

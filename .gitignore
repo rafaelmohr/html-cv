@@ -1,0 +1,5 @@
+*.json
+!language.json
+photo.jpeg
+
+.idea

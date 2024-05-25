@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="cv.css">
+    <script src="https://kit.fontawesome.com/bb29d1a5b5.js" crossorigin="anonymous"></script>
+</head>
+<body id="body"></body>
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script>
+    (async () => {
+        const language = (new URLSearchParams(window.location.search).get('lang')) ?? 'language';
+        const model = await (await fetch(`${language}.json`)).json();
+        const templateContent = await (await fetch("template.handlebars")).text();
+
+        const template = Handlebars.compile(templateContent)
+
+        document.getElementById('body').innerHTML = template(model);
+    })();
+</script>
+
+</html>
