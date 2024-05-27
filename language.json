@@ -21,7 +21,8 @@
     "items": [
       {
         "dateString": "since 10/02",
-        "title": "XY Inc., Very important position",
+        "title": "Very important position",
+        "company": "XY Inc.",
         "text": "First line. <br /> Second Line"
       }
     ]

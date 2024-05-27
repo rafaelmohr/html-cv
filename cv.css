@@ -69,8 +69,8 @@ h1, h2 {
     grid-column: span 2;
     display: flex;
     align-self: center;
-    width: 270px;
-    height: 290px;
+    width: 260px;
+    height: 270px;
     border-radius: var(--border-radius);
     overflow: hidden;
 
@@ -121,7 +121,7 @@ h2 {
     position: relative;
 
     &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 14px;
     }
 
     .circle {
@@ -140,9 +140,13 @@ h2 {
     .content {
         padding: 10px;
 
-        h3 {
+        & h3 {
             margin-top: 0;
             margin-bottom: 5px;
+        }
+
+        & h4 {
+            margin-block: 5px;
         }
 
         p {
