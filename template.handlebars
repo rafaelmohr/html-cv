@@ -55,7 +55,9 @@
         {{#each publications.items}}
             <div class="item">
                 <span class="status">{{this.dateString}}</span>
-                <span class="title">{{this.title}}</span>
+                <a href="{{this.link}}">
+                    <span class="title">{{this.title}}</span>
+                </a>
                 <span class="details">{{this.text}}</span>
             </div>
         {{/each}}

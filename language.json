@@ -33,7 +33,8 @@
       {
         "dateString": "May 2024",
         "title": "Paper Title",
-        "text": "Conference of Papers, London"
+        "text": "Conference of Papers, London",
+        "link": "https://example.com"
       }
     ]
   },
